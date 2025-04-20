@@ -1,84 +1,4 @@
-// // Play sound on card click
-// function playSound() {
-//   const audio = document.getElementById("click-sound");
-//   audio.play();
-// }
-//
-// // Greet user by time
-// const greeting = document.getElementById("greeting");
-// const hour = new Date().getHours();
-// if (hour < 12) greeting.textContent = "Good morning!";
-// else if (hour < 18) greeting.textContent = "Good afternoon!";
-// else greeting.textContent = "Good evening!";
-//
-// // Fake viewer count using localStorage
-// let views = localStorage.getItem("views") || 0;
-// views++;
-// localStorage.setItem("views", views);
-// document.getElementById("view-count").innerText = `You're visitor #${views}`;
-//
-// // Swipe detection (Tactile)
-// let startX;
-// document.addEventListener("touchstart", e => startX = e.touches[0].clientX);
-// document.addEventListener("touchend", e => {
-//   const diff = e.changedTouches[0].clientX - startX;
-//   if (diff > 50) alert("You swiped right!");
-// });
-//
-// // Scroll animations with IntersectionObserver
-// const observer = new IntersectionObserver(entries => {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) entry.target.classList.add("fade-in");
-//   });
-// });
-// document.querySelectorAll("section").forEach(sec => observer.observe(sec));
-//
-// // Dark mode toggle
-// document.getElementById("darkModeToggle").onclick = () => {
-//   document.body.classList.toggle("dark");
-// };
-//
-// // Navbar preview hover
-// const previewBox = document.getElementById("nav-preview");
-// document.querySelectorAll('.navbar a').forEach(link => {
-//   link.addEventListener("mouseover", () => {
-//     const img = link.getAttribute("data-img");
-//     previewBox.style.display = "block";
-//     previewBox.style.backgroundImage = `url(${img})`;
-//   });
-//   link.addEventListener("mouseout", () => {
-//     previewBox.style.display = "none";
-//   });
-// });
-//
-//
-// ]const hour = new Date().getHours();
-// const avatarEmoji = document.getElementById("avatar-emoji");
-// const avatarMessage = document.getElementById("avatar-message");
-//
-// if (avatarEmoji && avatarMessage) {
-//   if (hour < 12) {
-//     avatarEmoji.textContent = "🌞";
-//     avatarMessage.textContent = "Good morning! Ready to explore?";
-//   } else if (hour < 18) {
-//     avatarEmoji.textContent = "😎";
-//     avatarMessage.textContent = "Good afternoon! Check out my projects!";
-//   } else {
-//     avatarEmoji.textContent = "🌙";
-//     avatarMessage.textContent = "Working late? Let me help you!";
-//   }
-//
-//   window.addEventListener("scroll", () => {
-//     const scrollY = window.scrollY;
-//     if (scrollY > 300 && scrollY < 800) {
-//       avatarEmoji.textContent = "👀";
-//       avatarMessage.textContent = "Scroll down for cool stuff!";
-//     } else if (scrollY >= 800) {
-//       avatarEmoji.textContent = "💬";
-//       avatarMessage.textContent = "Got feedback? Leave a testimonial!";
-//     }
-//   });
-// }
+
 
 
 // Play sound on card click
@@ -95,12 +15,6 @@ if (greeting) {
   else if (hour < 18) greeting.textContent = "Good afternoon!";
   else greeting.textContent = "Good evening!";
 }
-
-// Fake viewer count using localStorage
-// let views = localStorage.getItem("views") || 0;
-// views++;
-// localStorage.setItem("views", views);
-// document.getElementById("view-count").innerText = `You're visitor #${views}`;
 
 // Swipe detection (Tactile)
 let startX;
@@ -222,48 +136,7 @@ function toggleProject(projectNumber) {
   }
 }
 
-//
-// function toggleProject(projectNumber) {
-//   const projectCard = document.querySelector(`.project-card:nth-of-type(${projectNumber})`);
-//   const ribbon = projectCard.querySelector('.ribbon');
-//   const projectDetailsBox = document.getElementById('project-details-box');
-//   const projectIntro = document.getElementById('project-intro');
-//   const projectImagesContainer = document.getElementById('project-images-container');
-//
-//   projectCard.classList.toggle('expanded');
-//
-//   // Toggle the ribbon text based on the current state
-//   if (projectCard.classList.contains('expanded')) {
-//     ribbon.textContent = "Fold";  // Change to Fold when expanded
-//     ribbon.setAttribute("data-status", "fold");
-//
-//     // Show the project details box on the right side
-//     projectDetailsBox.style.display = 'block';
-//
-//     // Add project content dynamically (for example)
-//     if (projectNumber === 1) {
-//       projectIntro.textContent = "This is an intro for Project 1. This project involves innovative features and uses various technologies.";
-//       projectImagesContainer.innerHTML = `
-//         <img src="images/project1_image1.png" alt="Image 1" class="project-image">
-//         <img src="images/project1_image2.png" alt="Image 2" class="project-image">
-//       `;
-//     } else if (projectNumber === 2) {
-//       projectIntro.textContent = "This is an intro for Project 2. It showcases advanced concepts and great usability.";
-//       projectImagesContainer.innerHTML = `
-//         <img src="images/project2_image1.png" alt="Image 1" class="project-image">
-//         <img src="images/project2_image2.png" alt="Image 2" class="project-image">
-//       `;
-//     }
-//     // Add more conditions as needed for different projects
-//
-//   } else {
-//     ribbon.textContent = "Unfold";  // Change to Unfold when folded
-//     ribbon.setAttribute("data-status", "unfold");
-//
-//     // Hide the project details box when the card is folded
-//     projectDetailsBox.style.display = 'none';
-//   }
-// }
+
 
 function revealContactCard() {
   const container = document.getElementById('contactContainer');
