@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class = "underline"></div>
+        <button id="darkModeToggle">🌙</button>
+    </nav>
+
+    <div class="contact-container" id="contactContainer">
+        <div class="contact-cover" onclick="revealContactCard()">
+            <h2>👋 Wanna say Hi?</h2>
+        </div>
+
+        <div class="contact-card">
+            <h3>📧 Contact Me</h3>
+            <p><strong>Email:</strong> rohit23444@iiitd.ac.in</p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/rohit" target="_blank">linkedin.com/in/rohit</a></p>
+            <p><strong>FaceBook:<strong> <a href="https://facebook.com/in/rohit" target="blank">facebook.com/in/rohit</a> </strong></strong></p>
+            <p><strong>Phone:</strong> +91-9717831147</p>
+        </div>
+    </div>
+    <audio id="persistentAudio" preload="auto" loop>
+        <source src="assets/audio/ringtone.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+
+    <button id="audioToggle" class="audio-toggle-btn">🔊</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

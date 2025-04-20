@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo"></div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="underline"></div>
+    <button id="darkModeToggle">🌙</button>
+</nav>
+
+<!-- Main content -->
+<main class="content">
+    <section class="projects-section">
+        <div class="page-header">
+            <h1>Projects</h1>
+            <p>Here are some of the projects I've worked on:</p>
+        </div>
+
+        <div class="projects-wrapper">
+            <!-- Project Card 1 -->
+
+
+            <div class="project-card">
+                <div class="project-wrap">
+                    <div class="ribbon" data-status="unfold" onclick="toggleProject(1)">Unfold</div>
+                    <h2>Project 1</h2>
+                    <p>About: I made a fully working angry birds in my sem 3 as a project of AP</p>
+                    <div class="project-content">
+                        <h2>Angry Birds Game </h2>
+                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d1ce7cd9-e933-4426-b635-64340162429a/dfifqfr-aea5f8bd-3ed3-4cb9-b32c-cde82339f93e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QxY2U3Y2Q5LWU5MzMtNDQyNi1iNjM1LTY0MzQwMTYyNDI5YVwvZGZpZnFmci1hZWE1ZjhiZC0zZWQzLTRjYjktYjMyYy1jZGU4MjMzOWY5M2UucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.XY2VQDiNTwJ8EhKIa2YWzc0zXwkglFdTTYgyV7AkZHg" alt="Project Image" class="project-image">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.NWZx6kTwX1zPOK2h6PQ-7gHaEK?w=1920&h=1080&rs=1&pid=ImgDetMain" alt="Project Image" class="project-image">
+                        <p>I used Tackstack like Java, LibGDX, Box2D, sprites, Git and Junit test</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <div class="project-wrap">
+                    <div class="ribbon" data-status="unfold" onclick="toggleProject(2)">Unfold</div>
+                    <h2>Project 2</h2>
+                    <p>About: I recently made a app named THEKEDAR as a project of DBMS</p>
+                    <div class="project-content">
+                        <h2>Project 2: Academic Management</h2>
+                        <p>I used Techstack like Node.js, java, javascript, html, css, kotlin.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-wrap">
+                    <div class="ribbon" data-status="unfold" onclick="toggleProject(3)">Unfold</div>
+                    <h2>Project 3</h2>
+                    <p>About: I also made a database system to manage canteen and academic</p>
+                    <div class="project-content">
+                        <h2>Project 3: Task Manager</h2>
+                        <p>This project showcases my skills in building scalable database system to manage the system concurrently.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+</footer>
+
+<audio id="persistentAudio" preload="auto" loop>
+    <source src="assets/audio/ringtone.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<!-- Navbar animation trigger -->
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const navbar = document.querySelector(".navbar");
+        navbar.classList.add("animate-navbar");
+    });
+
+    // Function to unfold project content when the ribbon is clicked
+    function unfoldProject(projectNumber) {
+        const projectCard = document.querySelector(`.project-card:nth-of-type(${projectNumber})`);
+        projectCard.classList.toggle('expanded');
+    }
+</script>
+
+<button id="audioToggle" class="audio-toggle-btn">🔊</button>
+
+<script src="script.js"></script>
+</body>
+</html>

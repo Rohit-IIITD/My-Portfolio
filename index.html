@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Elegant Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class = "underline"></div>
+    <button id="darkModeToggle">🌙</button>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const toggleButton = document.getElementById('darkModeToggle');
+        if (toggleButton) {
+          toggleButton.addEventListener('click', function () {
+            // Your dark mode toggle code here
+            document.body.classList.toggle('dark-mode');
+          });
+        }
+      });
+    </script>
+
+  </nav>
+
+  <section id="home" class="fade-in">
+    <header>
+      <h1>Hello, I'm <span class="highlight">Rohit</span></h1>
+      <p class="subtitle">Welcome to my design journey.</p>
+    </header>
+
+    <div class="profile-photo">
+      <img src="assets/images/myimage.jpg" alt="Rohit's photo">
+    </div>
+
+    <section id="about" class="about-section">
+      <h2>About Me</h2>
+      <p>Hi, I'm <strong>Rohit</strong>, a 20-year-old tech enthusiast from Delhi.</p>
+
+      <h3>Education</h3>
+      <ul>
+        <li>10th from Maharaja Agarsain Public School, Delhi-39 – <strong>94%</strong></li>
+        <li>12th from Kendriya Vidyalaya, Delhi-39 – <strong>89%</strong></li>
+        <li>Currently pursuing B.Tech in Computer Science and Design from <strong>IIIT Delhi, Okhla</strong></li>
+      </ul>
+
+      <h3>Skills</h3>
+      <ul>
+        <li>Web Development</li>
+        <li>Adobe Suite</li>
+        <li>App Development</li>
+      </ul>
+
+      <h3>Programming Languages</h3>
+      <ul>
+        <li>Java, C++, C, Python</li>
+        <li>Kotlin, SQL</li>
+        <li>JavaScript, HTML, CSS, Dart</li>
+      </ul>
+    </section>
+
+
+    <div class="floating-center-avatar" onclick="avatarInteract()">
+      <div id="avatar-emoji">👋</div>
+      <div id="avatar-message">Click me for tips!</div>
+    </div>
+  </section>>
+
+  <audio id="persistentAudio" preload="auto" loop>
+    <source src="assets/audio/ringtone.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button id="audioToggle" class="audio-toggle-btn">🔊</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
